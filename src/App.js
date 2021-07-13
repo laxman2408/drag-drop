@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import List from './components/List'
+import Content from './components/Content';
 
 function App() {
+  const data = [
+    {
+       title :'Ideas',
+       items:[
+           'im perumal laxman',
+           
+           'iam a frontend Developer'
+       ]
+   },
+   {
+       title:'Tasks ',
+       items:[
+           'task 3',
+           'drag and drop'
+       ]
+   },
+   {
+       title:'Team mates',
+       items:[
+           'iyappan',
+           'vaishnavi',
+           'praveen'
+       ]
+   }
+]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div>
+        <div className="head">Dropdown</div>
+                <div className = "App">
+                    {/* <DragLists/> */}
+                    <List />
+                    <Content data = {data}/>
+                    {/* <One/> */}
+                  
+          </div>
+  </div> 
+  )
 }
 
-export default App;
+export default App
+
